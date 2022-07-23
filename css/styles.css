@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0ch;
+    box-sizing: border-box;
+}
+
+html{
+    font-family:'Open Sans', sans-serif;
+}
+@font-face {
+    font-family: "Universo Artesano" ;
+    src: url("../fonts/BAUHS93.ttf");
+}
+
+.page-container {
+    width: 80vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header"
+    "section section section"
+    "section section section"
+    "section section section"
+    "section section section"
+    "footer footer footer"
+    "footer footer footer"
+    ;
+}
+.spacer {
+    margin: 1rem 0;
+}
+
+.p-spacer {
+    margin: .5rem;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logouniverso {
+   transition: 300ms ease ;
+}
+
+.logouniverso:hover{
+    transform: scale(110%);
+
+}
+.header-isologo {
+    display: flex;
+    align-content: center;
+    margin: 5px;
+}
+.header-isologo .logouniverso {
+    padding-right: 10px;
+    margin: 5px;
+}
+
+
+.header-isologo .universoartesano {
+    font-family: "Universo Artesano";
+    font-size: 1.7rem;
+    color: #CE9C00;
+    text-shadow: black 1px 1px;
+}
+
+.header-isologo .slogan {
+    font-family: "monserrat";
+    font-style: italic;
+    font-weight: bold;
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
+    font-family: "Monserrat";
+    font-size: .9em;
+}
+
+.header-contact .logo-whatsaap{
+    margin: 5px;
+}
+
+.header-contact a:hover {
+    color: #CE9C00;
+}
+
+.header-contact .logo-send{
+    margin: 5px;
+}
+.header-contact a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/* NAV */
+
+nav ul .borde-rigth {
+   border-right: solid #CE9C00;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+nav ul li a {
+    font-family: "Monserrat";
+    font-size: .9em;
+    text-decoration: none;
+    color: black;
+    padding: 0 3px 0 3px;
+    
+}
+nav ul li a:hover {
+    color: #CE9C00;
+}
+
+/* SECTION */
+
+section{
+    grid-area: section;
+    display: flex;
+}
+
+section div .title {
+    height: 40px;
+    text-align: center;
+    padding: 5px;
+    font-family: "Roboto";
+    text-shadow: #CE9C00 1px 1px;
+}
+section div p {
+    text-align: center;
+    font-family: "Monserrat";
+    font-size: 1.4em;
+    padding: 5px;
+}
+
+
+section .units {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ 
+    height: 21vw;
+   
+    
+} 
+section .unit:hover {
+    transform: scale(110%);
+}
+
+section .unit {
+    width: 150px;
+    transition: 300ms ease-in;
+}
+
+section .units-titles {
+    display: flex;
+    justify-content: space-around;
+    
+  
+}
+
+section .catalog {
+   padding: 5px;
+   font-size: 1.4em; 
+}
+section .catalog a {
+    text-decoration: none;
+    color: black; 
+    font-size: .8em; 
+}
+section .catalog a:hover {
+    color: #CE9C00;
+}
+
+/* FOOTER */
+
+footer{
+    grid-area: footer;
+    display:inline;
+}
+
+footer .redes {
+    height: 5vw;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .redes a {
+    font-family: "Monserrat";
+    font-size: 1.4em ;
+    color: black;
+    text-decoration: none;
+    padding: 3px;
+}
+
+footer .pie {
+    justify-content: center;
+    align-items: center;
+}
+footer .copy {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Monserrat";
+    font-size: 1.2em;
+}
+
+/* MEDIA QUERIES */
+/* TABLET */
+@media screen and (max-width: 768px){
+  
+    header {
+   flex-direction: column;
+    }
+    section div p {
+    font-size: 1.2em;
+    height: 100px;
+    text-align: justify;
+}
+
+@media screen and (min-width:767px){
+     header {
+   flex-direction: column;
+
+    }
+    section div p {
+    font-size: 1.2em;
+    height: 200px;
+    text-align: justify;
+}
+}
+
+/* MOBILE */
+    @media screen and (max-width: 576px){
+        header {
+        flex-direction: column;   
+    }
+    section div p {
+        height: 150px;
+        font-size: 1,2em;
+        text-align: justify;
+
+    }
+    }
